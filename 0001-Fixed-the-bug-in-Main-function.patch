@@ -1,0 +1,25 @@
+From f686471fffaac445420c7b9cd748c495b49479ab Mon Sep 17 00:00:00 2001
+From: UserName <example@example.com>
+Date: Mon, 15 Jul 2024 20:55:47 +0530
+Subject: [PATCH] Fixed the bug in Main function
+
+---
+ client3.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/client3.py b/client3.py
+index 644b8bb..f484f68 100644
+--- a/client3.py
++++ b/client3.py
+@@ -58,7 +58,7 @@ if __name__ == "__main__":
+         prices = {}
+         for quote in quotes:
+             stock, bid_price, ask_price, price = getDataPoint(quote)
+-            price[stock] = price
++            prices[stock] = price
+             print("Quoted %s at (bid:%s, ask:%s, price:%s)" % (stock, bid_price, ask_price, price))
+ 
+         print("Ratio %s" % getRatio(prices["ABC"], prices["DEF"]))
+-- 
+2.44.0.windows.1
+
